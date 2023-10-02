@@ -1,18 +1,50 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  purge: ["./**/*.js"],
+  darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ["Metropolis", ...defaultTheme.fontFamily.sans],
+        mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
       },
+      colors: {
+        body: "#f9f9fa",
+      },
+      fontSize: {
+        sm: "0.8125rem",
+        'xxs': '10px',
+      },
+      opacity: {
+        "80": "0.80",
+      },
+      borderRadius: {
+        xl: "2rem",
+      },
+      boxShadow: {
+        xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
+        outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+      }
     },
   },
-  plugins: [],
-}
+  variants: {
+    float: ["responsive", "direction"],
+    margin: ["responsive", "direction"],
+    padding: ["responsive", "direction"],
+    textAlign: ["responsive", "direction"],
+    inset: ["responsive", "direction"],
+    transformOrigin: ["responsive", "direction"],
+    borderRadius: ["responsive", "direction"],
+    translate: ["responsive", "direction"],
+    backgroundColor: ["dark"],
+    borderColor: ["dark"],
+    textColor: ["dark"],
+    boxShadow: ["dark"],
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-dir")(),
+  ],
+};
