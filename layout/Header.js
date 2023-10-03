@@ -19,6 +19,7 @@ import Notifications from "./Notifications";
 import PropTypes from "prop-types";
 import Shortcuts from "./Shortcuts";
 import { useAppState } from "components/AppProvider";
+import { useEffect } from "react";
 
 const colors = [
   "gray",
@@ -96,7 +97,7 @@ const Header = ({ toggleOpen }) => {
                           className={`text-center py-3 px-3 cursor-pointer flex flex-1`}
                         >
                           <a className="text-gray-900 hover:text-indigo">
-                            Settings
+                            {t("settings")}
                           </a>
                         </div>
                       </div>
@@ -107,7 +108,10 @@ const Header = ({ toggleOpen }) => {
                           if (
                             option !== "sidebarColor" &&
                             option !== "language" &&
-                            option !== "name"
+                            option !== "name" &&
+                            option !== "rtl" &&
+                            option !== "stickySidebar" &&
+                            option !== "stickyHeader"
                           )
                             return option;
                         })
@@ -290,14 +294,10 @@ const Header = ({ toggleOpen }) => {
                     <a
                       className="flex items-center px-5 py-3 leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out cursor-pointer"
                       onClick={() => {
-                        i18n.changeLanguage("ar");
+                        i18n.changeLanguage("vi");
                         dispatch({
                           type: "setLanguage",
-                          value: "ar",
-                        });
-                        dispatch({
-                          type: "toggleRtl",
-                          value: true,
+                          value: "vi",
                         });
                       }}
                     >
@@ -305,88 +305,14 @@ const Header = ({ toggleOpen }) => {
                         width={16}
                         height={16}
                         className={`${
-                          i18n.language === "ar" || state.language === "ar"
+                          i18n.language === "vi" || state.language === "vi"
                             ? "opacity-100"
                             : "opacity-0"
                         }`}
                       />{" "}
-                      <span className="ltr:ml-3 rtl:mr-3">{t("arabic")}</span>
+                      <span className="ltr:ml-3 rtl:mr-3">{t("vietnamese")}</span>
                     </a>
-                    <a
-                      className="flex items-center px-5 py-3 leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out cursor-pointer"
-                      onClick={() => {
-                        i18n.changeLanguage("hi");
-                        dispatch({
-                          type: "setLanguage",
-                          value: "hi",
-                        });
-                        dispatch({
-                          type: "toggleRtl",
-                          value: false,
-                        });
-                      }}
-                    >
-                      <Check
-                        width={16}
-                        height={16}
-                        className={`${
-                          i18n.language === "hi" || state.language === "hi"
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
-                      />{" "}
-                      <span className="ltr:ml-3 rtl:mr-3">{t("hindi")}</span>
-                    </a>
-                    <a
-                      className="flex items-center px-5 py-3 leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out cursor-pointer"
-                      onClick={() => {
-                        i18n.changeLanguage("fr");
-                        dispatch({
-                          type: "setLanguage",
-                          value: "fr",
-                        });
-                        dispatch({
-                          type: "toggleRtl",
-                          value: false,
-                        });
-                      }}
-                    >
-                      <Check
-                        width={16}
-                        height={16}
-                        className={`${
-                          i18n.language === "fr" || state.language === "fr"
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
-                      />{" "}
-                      <span className="ltr:ml-3 rtl:mr-3">{t("french")}</span>
-                    </a>
-                    <a
-                      className="flex items-center px-5 py-3 leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out cursor-pointer"
-                      onClick={() => {
-                        i18n.changeLanguage("zh");
-                        dispatch({
-                          type: "setLanguage",
-                          value: "zh",
-                        });
-                        dispatch({
-                          type: "toggleRtl",
-                          value: false,
-                        });
-                      }}
-                    >
-                      <Check
-                        width={16}
-                        height={16}
-                        className={`${
-                          i18n.language === "zh" || state.language === "zh"
-                            ? "opacity-100"
-                            : "opacity-0"
-                        }`}
-                      />{" "}
-                      <span className="ltr:ml-3 rtl:mr-3">{t("chinese")}</span>
-                    </a>
+                    
                   </div>
                 </DropdownMenu>
               </Dropdown>

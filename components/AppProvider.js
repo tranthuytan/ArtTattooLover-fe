@@ -47,28 +47,6 @@ const reducer = (state, action) => {
       saveToLocal(newState);
       return newState;
     }
-    case "toggleStickyHeader": {
-      const newState = {
-        ...state,
-        stickyHeader:
-          typeof action.value !== "undefined"
-            ? action.value
-            : !state.stickyHeader,
-      };
-      saveToLocal(newState);
-      return newState;
-    }
-    case "toggleStickySidebar": {
-      const newState = {
-        ...state,
-        stickySidebar:
-          typeof action.value !== "undefined"
-            ? action.value
-            : !state.stickySidebar,
-      };
-      saveToLocal(newState);
-      return newState;
-    }
     case "toggleDarkMode": {
       const newState = {
         ...state,
@@ -102,14 +80,6 @@ const reducer = (state, action) => {
     }
     case "setLanguage": {
       const newState = { ...state, language: action.value };
-      saveToLocal(newState);
-      return newState;
-    }
-    case "toggleRtl": {
-      const newState = {
-        ...state,
-        rtl: typeof action.value !== "undefined" ? action.value : !state.rtl,
-      };
       saveToLocal(newState);
       return newState;
     }
