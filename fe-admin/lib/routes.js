@@ -64,4 +64,9 @@ export const artistRoutes = [
     name: "timetable",
     icon: <Calendar width={size} height={size} />,
   },
+  {
+    path: "/tattooProfile",
+    name: "tattooProfile",
+    icon: <Template width={size} height={size} />,
+  },
 ]
