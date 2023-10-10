@@ -41,7 +41,9 @@ function AdminStudioPage() {
 		[]
 	);
 
-  const { data, error } = useSWR(`${process.env.NEXT_PUBLIC_API_BASEURL}/Studios`, fetcher);
+	const baseUrl = `${process.env.NEXT_PUBLIC_API_BASEURL}/Studios`;
+
+  const { data, error } = useSWR(baseUrl, fetcher);
   if (error)
     return (
       <div className="flex items-center justify-center h-full">
