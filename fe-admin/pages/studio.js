@@ -1,9 +1,10 @@
-import Table from "components/Table";
+import AdminStudioPage from "layout/Admin/Studio";
 
-const TablePage = () => <Table />;
+const StudioPage = () => {
 
-TablePage.getInitialProps = async () => ({
-  namespacesRequired: ["header", "footer", "sidebar"],
-});
+  return (
+    <AdminStudioPage />
+  )
+}
 
-export default TablePage;
+export default StudioPage;

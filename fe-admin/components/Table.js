@@ -5,7 +5,7 @@ import React from 'react';
 import { fetcher } from "lib";
 import useSWR from "swr";
 
-function Table({ columns, data }) {
+export const Table = ({ columns, data }) => {
   const {
     getTableProps,
     getTableBodyProps,
@@ -25,7 +25,7 @@ function Table({ columns, data }) {
     {
       columns,
       data,
-      initialState: { pageIndex: 2 },
+      initialState: { pageIndex: 0 },
     },
     usePagination
   );
@@ -107,6 +107,8 @@ function Table({ columns, data }) {
           <input
             type="number"
             defaultValue={pageIndex + 1}
+            min={1}
+            max={pageOptions.length}
             onChange={(e) => {
               const page = e.target.value ? Number(e.target.value) - 1 : 0;
               gotoPage(page);

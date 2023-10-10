@@ -99,7 +99,7 @@ const reducer = (state, action) => {
 const AppProvider = (props) => {
   //Template default options
   const [state, dispatch] = useReducer(reducer, {
-    name: "Square.",
+    name: "ATL",
     mobile: false,
     stickyHeader: true,
     stickySidebar: true,
