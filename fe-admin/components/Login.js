@@ -1,10 +1,10 @@
-import { Card, CardBody, Link, Logo, Ripple } from "ui";
+import { Link, Logo, Ripple } from "ui";
 
 import Illustration from "public/images/illustrations/undraw_Group_chat_unwm.svg";
 import { useTranslation } from "i18n";
 
-const Signin = () => {
-  const { t } = useTranslation("signin");
+const Login = () => {
+  const { t } = useTranslation("login");
   return (
     <div className="flex flex-col justify-center items-center px-3 bg-white dark:bg-gray-600 min-h-screen">
       <div className="w-full max-w-screen-xl">
@@ -56,14 +56,14 @@ const Signin = () => {
                   className="shadow-sm relative w-full flex justify-center py-3 px-4 border border-transparent text-sm rounded-lg text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out mb-3 leading-none"
                   type="submit"
                 >
-                  {t("signinButton")}
+                  {t("loginButton")}
                   <Ripple />
                 </button>
               </form>
               <div className="text-center">
                 <small className="text-gray-700 text-center">
                   <span>{t("haveAccount?")}</span>{" "}
-                  <Link href="/signup">
+                  <Link href="/register">
                     <a>{t("createAccount")}</a>
                   </Link>
                 </small>
@@ -75,4 +75,4 @@ const Signin = () => {
     </div>
   );
 };
-export default Signin;
+export default Login;

@@ -3,7 +3,7 @@
   "subtitle": "to continue using your account",
   "emailAddress": "Email address",
   "password": "Password",
-  "signinButton": "Sign in",
+  "loginButton": "Sign in",
   "haveAccount?": "Don't have an account yet?",
   "createAccount": "Create one now!"
 }

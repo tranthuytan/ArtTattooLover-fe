@@ -114,7 +114,7 @@ const ComingSoon = () => {
               <div className="text-center">
                 <small className="text-gray-700 text-center">
                   <span>{t("haveAccount?")}</span>{" "}
-                  <Link href="/signup">
+                  <Link href="/register">
                     <a>{t("createAccount")}</a>
                   </Link>
                 </small>

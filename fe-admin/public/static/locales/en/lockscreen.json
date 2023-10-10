@@ -2,5 +2,5 @@
   "passCode": "Pass Code",
   "unlockButton": "Unlock",
   "yourAccount?": "Not your account?",
-  "signinLink": "Signin here!"
+  "loginLink": "Login here!"
 }

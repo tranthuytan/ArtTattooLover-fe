@@ -45,7 +45,7 @@ const Music = () => {
             <div className="px-4 mb-4">
               <div className="flex items-center py-4">
                 <div className="flex-1">
-                  <span className="flex items-center relative py-px cursor-pointer truncate font-medium text-sm uppercase font-bold mt-4">{category}</span>
+                  <span className="flex items-center relative py-px cursor-pointer truncate text-sm uppercase font-bold mt-4">{category}</span>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-2">
@@ -53,7 +53,7 @@ const Music = () => {
                   <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/6 px-2 mb-4">
                     <div className="group relative mb-4 cursor-pointer" style={{ height: "300px" }}>
                       <BackgroundImg
-                        className="relative block w-full m-auto absolute bg-cover bg-center w-full h-full object-cover bg-center rounded-lg"
+                        className="relative block w-full m-auto absolute bg-cover bg-center h-full object-cover bg-center rounded-lg"
                         image={`${basePath}/images/unsplash/${album.id}.jpg`}
                       />
                       <div className="absolute w-full h-full top-0 left-0 rounded-lg bg-gradient-to-b from-transparent to-black flex items-center justify-center opacity-0 group-hover:opacity-100">

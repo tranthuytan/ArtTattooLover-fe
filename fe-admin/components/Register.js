@@ -3,8 +3,8 @@ import { Link, Logo, Ripple } from "ui";
 import Illustration from "public/images/illustrations/undraw_secure_data_0rwp.svg";
 import { useTranslation } from "i18n";
 
-const Signup = () => {
-  const { t } = useTranslation("signup");
+const Register = () => {
+  const { t } = useTranslation("register");
   return (
     <div className="flex flex-col justify-center items-center px-3 bg-white dark:bg-gray-600 min-h-screen">
       <div className="w-full max-w-screen-xl">
@@ -78,14 +78,14 @@ const Signup = () => {
                   className="shadow-sm relative w-full flex justify-center py-3 px-4 border border-transparent text-sm rounded-lg text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out my-3 leading-none"
                   type="submit"
                 >
-                  {t("signupButton")}
+                  {t("registerButton")}
                   <Ripple />
                 </button>
               </form>
               <div className="text-center">
                 <small className="text-gray-700 text-center">
                   <span>{t("haveAccount?")}</span>{" "}
-                  <Link href="/signin">
+                  <Link href="/login">
                     <a>{t("loginLink")}</a>
                   </Link>
                 </small>
@@ -98,4 +98,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Register;
