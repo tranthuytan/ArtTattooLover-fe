@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Metropolis", ...defaultTheme.fontFamily.sans],
+        sans: ["OpenSans", ...defaultTheme.fontFamily.sans],
         mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
       },
       colors: {
