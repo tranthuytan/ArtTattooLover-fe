@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 const Menu = () => {
 	const [state] = useAppState();
-	const roleId = 0;
+	const roleId = 1;
 	let routes = adminRoutes;
 	if (roleId === 1) {
 		routes = studioRoutes;

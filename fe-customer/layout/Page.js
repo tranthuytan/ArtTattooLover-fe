@@ -91,7 +91,7 @@ const Page = ({ children }) => {
     <>
       <Head>
         <title>
-          {pageName ? capitalize(pageName) : "Home"} | Admin Template
+          {pageName ? capitalize(pageName) + ' | ATL' : "Art Tattoo Lover"}
         </title>
       </Head>
 
