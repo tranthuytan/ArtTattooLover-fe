@@ -103,7 +103,7 @@ const Page = ({ children }) => {
       >
         {!isNotDashboard ? (
           <>
-            <Sidebar {...sidebarProps}>
+            <div>
               <Header toggleOpen={toggleOpen} />
 
               <div
@@ -114,7 +114,7 @@ const Page = ({ children }) => {
                 {children}
               </div>
               {!isFooterHidden && <Footer />}
-            </Sidebar>
+            </div>
           </>
         ) : (
           children
