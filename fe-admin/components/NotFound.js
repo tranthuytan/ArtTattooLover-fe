@@ -5,7 +5,7 @@ import Illustration from "public/images/illustrations/undraw_filing_system_b5d2.
 import { useTranslation } from "i18n";
 
 const NotFound = ({ code }) => {
-  const { t } = useTranslation("not-found");
+  const { t } = useTranslation("notFound");
   const title = code === 404 ? t("404") : HTTPStatus[code] || t("unexpected");
 
   return (

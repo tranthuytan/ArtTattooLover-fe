@@ -110,7 +110,6 @@ const Header = ({ toggleOpen }) => {
                             option !== "language" &&
                             option !== "name" &&
                             option !== "rtl" &&
-                            option !== "stickySidebar" &&
                             option !== "stickyHeader"
                           )
                             return option;

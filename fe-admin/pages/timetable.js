@@ -1,9 +1,10 @@
-import Timetable from "components/Calendar";
+import StudioTimetable from "layout/Studio/Timetable";
 
-const TimetablePage = () => <Timetable />;
+const StudioTimetablePage = () => {
 
-TimetablePage.getInitialProps = async () => ({
-  namespacesRequired: ["header", "footer", "sidebar", "calendar"],
-});
+  return (
+    <StudioTimetable />
+  )
+}
 
-export default TimetablePage;
+export default StudioTimetablePage;

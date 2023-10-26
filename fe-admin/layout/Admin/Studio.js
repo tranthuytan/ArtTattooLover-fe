@@ -108,6 +108,7 @@ function AdminStudioPage() {
 				tableCellType: TableCellType.BUTTON
 			};
 			renderedData.push(newStudio);
+			console.log(renderedData);
 		});
 		loading = false;
 	}

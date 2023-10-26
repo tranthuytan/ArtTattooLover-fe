@@ -63,6 +63,17 @@ const reducer = (state, action) => {
           typeof action.value !== "undefined" ? action.value : !phone.matches,
       };
     }
+    case "toggleStickySidebar": {
+      const newState = {
+        ...state,
+        stickySidebar:
+          typeof action.value !== "undefined"
+            ? action.value
+            : !state.stickySidebar,
+      };
+      saveToLocal(newState);
+      return newState;
+    }
     case "toggleAutoDarkMode": {
       let newState = {
         ...state,
