@@ -181,6 +181,9 @@ a {
 .rbc-event {
   @apply bg-indigo-500 rounded-md text-xs;
 }
+.rbc-event-label, .rbc-event-content {
+  color: #000;
+}
 .rbc-day-slot .rbc-event,
 .rbc-day-bg + .rbc-day-bg,
 .rbc-month-row + .rbc-month-row,
@@ -197,7 +200,6 @@ a {
 .rbc-day-slot .rbc-time-slot {
   border: 0;
 }
-
 /* purgecss end ignore */
 /* Divider */
 .divider::before,
