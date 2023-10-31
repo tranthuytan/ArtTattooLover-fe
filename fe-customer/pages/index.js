@@ -1,9 +1,9 @@
-import Dashboard from "components/Dashboard";
+import Index from "layout/Index";
 
-const DashboardPage = () => <Dashboard />;
+const IndexPage = () => <Index />;
 
-DashboardPage.getInitialProps = async () => ({
+IndexPage.getInitialProps = async () => ({
   namespacesRequired: ["header", "footer", "sidebar", "dashboard"],
 });
 
-export default DashboardPage;
+export default IndexPage;
